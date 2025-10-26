@@ -1,0 +1,5 @@
+# --- Build Dependencies for PyInstaller Cross-Platform Builds ---
+pyinstaller==6.16.0
+altgraph==0.17.2
+setuptools>=65.5.0
+wheel

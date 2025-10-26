@@ -1,0 +1,206 @@
+{
+  "money": [
+    {
+      "command": "motherlode",
+      "description": "Adds §50,000 to household funds.",
+      "aliases": ["add money", "give simoleons"]
+    },
+    {
+      "command": "kaching",
+      "description": "Adds §1,000 to household funds.",
+      "aliases": ["money 1000", "quick cash"]
+    },
+    {
+      "command": "rosebud",
+      "description": "Adds §1,000 to household funds. Classic Sims cheat.",
+      "aliases": ["rosebud money"]
+    }
+  ],
+  "skills": [
+    {
+      "command": "stats.set_skill_level Major_Programming 10",
+      "description": "Sets the Programming skill to max level.",
+      "aliases": ["max programming skill", "set coding skill"]
+    },
+    {
+      "command": "stats.set_skill_level Major_Painting 10",
+      "description": "Sets the Painting skill to max level.",
+      "aliases": ["max painting", "set art skill"]
+    }
+  ],
+  "needs": [
+    {
+      "command": "sims.fill_all_commodities",
+      "description": "Fills all needs for the selected Sim.",
+      "aliases": ["fill needs", "max needs", "make happy"]
+    },
+    {
+      "command": "sims.remove_all_buffs",
+      "description": "Removes all moodlets from the active Sim.",
+      "aliases": ["clear emotions", "remove moodlets"]
+    },
+    {
+      "command": "sims.add_buff Buff_Motives_Hunger_Full",
+      "description": "Fills hunger need only.",
+      "aliases": ["fill hunger", "no hunger"]
+    }
+  ],
+  "build": [
+    {
+      "command": "bb.moveobjects",
+      "description": "Allows objects to be placed anywhere.",
+      "aliases": ["move objects", "object placement"]
+    },
+    {
+      "command": "bb.showhiddenobjects",
+      "description": "Reveals hidden debug objects in Buy/Build mode.",
+      "aliases": ["show debug", "hidden objects"]
+    },
+    {
+      "command": "bb.ignoregameplayunlocksentitlement",
+      "description": "Unlocks all build mode objects.",
+      "aliases": ["unlock all objects", "build unlocks"]
+    }
+  ],
+  "relationships": [
+    {
+      "command": "modifyrelationship FirstName1 LastName1 FirstName2 LastName2 100 LTR_Friendship_Main",
+      "description": "Sets friendship between two Sims to 100.",
+      "aliases": ["max friendship", "friendship cheat"]
+    },
+    {
+      "command": "modifyrelationship FirstName1 LastName1 FirstName2 LastName2 100 LTR_Romance_Main",
+      "description": "Sets romance between two Sims to 100.",
+      "aliases": ["max romance", "romance cheat"]
+    }
+  ],
+  "money": [
+    {
+      "command": "money 100000",
+      "description": "Sets household funds to exactly §100,000.",
+      "aliases": []
+    },
+    {
+      "command": "sims.modify_funds +50000",
+      "description": "Adds §50,000 to household funds.",
+      "aliases": ["add money"]
+    },
+    {
+      "command": "sims.modify_funds -50000",
+      "description": "Subtracts §50,000 from household funds.",
+      "aliases": ["take money"]
+    }
+  ],
+  "build": [
+    {
+      "command": "bb.enablefreebuild",
+      "description": "Allows building on locked lots.",
+      "aliases": ["free build"]
+    },
+    {
+      "command": "bb.showliveeditobjects",
+      "description": "Shows hidden objects in build/buy.",
+      "aliases": ["show live debug"]
+    },
+    {
+      "command": "bb.showhiddenobjects",
+      "description": "Unlocks hidden objects in catalog.",
+      "aliases": ["debug objects"]
+    },
+    {
+      "command": "bb.moveobjects off",
+      "description": "Turns off moveobjects mode.",
+      "aliases": ["disable moveobjects"]
+    }
+  ],
+  "skills": [
+    {
+      "command": "stats.set_skill_level Major_Piano 10",
+      "description": "Maxes the Piano skill.",
+      "aliases": []
+    },
+    {
+      "command": "stats.set_skill_level Major_Baking 10",
+      "description": "Maxes the Baking skill.",
+      "aliases": []
+    },
+    {
+      "command": "stats.set_skill_level Major_Violin 10",
+      "description": "Maxes the Violin skill.",
+      "aliases": []
+    },
+    {
+      "command": "stats.set_skill_level Major_VideoGaming 10",
+      "description": "Maxes the Video Gaming skill.",
+      "aliases": []
+    }
+  ],
+  "needs": [
+    {
+      "command": "sims.fill_all_commodities",
+      "description": "Fills all needs for the selected Sim.",
+      "aliases": ["fill needs"]
+    },
+    {
+      "command": "sims.remove_all_buffs",
+      "description": "Removes all moodlets from the active Sim.",
+      "aliases": ["clear buffs"]
+    }
+  ],
+  "life": [
+    {
+      "command": "death.toggle false",
+      "description": "Disables all natural death.",
+      "aliases": ["disable death"]
+    },
+    {
+      "command": "death.toggle true",
+      "description": "Re-enables death if disabled.",
+      "aliases": ["enable death"]
+    },
+    {
+      "command": "cas.fulleditmode",
+      "description": "Allows full editing of Sims in CAS even after creation.",
+      "aliases": []
+    },
+    {
+      "command": "resetSim FirstName LastName",
+      "description": "Resets a Sim if they are stuck or glitched.",
+      "aliases": ["reset sim"]
+    }
+  ],
+  "ui": [
+    {
+      "command": "headlineEffects off",
+      "description": "Hides plumbobs, thought balloons, etc.",
+      "aliases": ["no UI effects"]
+    },
+    {
+      "command": "headlineEffects on",
+      "description": "Restores UI effects like plumbobs.",
+      "aliases": ["show UI effects"]
+    },
+    {
+      "command": "fullscreen",
+      "description": "Toggles full-screen mode.",
+      "aliases": []
+    }
+  ],
+  "career": [
+    {
+      "command": "careers.promote Astronaut",
+      "description": "Promotes Sim in the Astronaut career.",
+      "aliases": []
+    },
+    {
+      "command": "careers.promote Entertainer",
+      "description": "Promotes Sim in the Entertainer career.",
+      "aliases": []
+    },
+    {
+      "command": "careers.remove_career Retail",
+      "description": "Removes the Retail career from Sim.",
+      "aliases": ["quit retail"]
+    }
+  ]
+}

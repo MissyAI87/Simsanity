@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>simsanity</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-container">
+    <h1>✨ simsanity</h1>
+
+    <!-- Prompt selection buttons -->
+    <!-- Simsanity skill buttons -->
+    <div class="prompt-buttons">
+      <button id="btn-modfix" onclick="choosePrompt('modfix')">🛠️ ModFix</button>
+      <button id="btn-howto" onclick="choosePrompt('howto')">📘 How-To</button>
+      <button id="btn-cheats" onclick="choosePrompt('cheats')">🎮 Cheats</button>
+      <!-- <button id="btn-ad" onclick="choosePrompt('ad')">📝 New Ad</button> -->
+      <!-- <button id="btn-report" onclick="choosePrompt('report')">📊 Build Report</button> -->
+      <!-- <button id="btn-schedule" onclick="choosePrompt('schedule')">📅 Schedule Post</button> -->
+      <!-- <button id="btn-hashtag" onclick="choosePrompt('hashtag')">#️⃣ Find Hashtags</button> -->
+    </div>
+
+    <div id="chat" class="chat-box"></div>
+
+    <div class="input-row">
+      <input id="message" placeholder="Type a message..." onkeypress="checkEnter(event)" />
+      <button id="btn-send" onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+  <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

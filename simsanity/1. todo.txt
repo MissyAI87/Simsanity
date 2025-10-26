@@ -1,0 +1,44 @@
+───────────────────────────────
+🧠 SUMMARY — 2025-10-15 | Simsanity Bytecode Build Status
+
+Current Phase:
+Transitioned from direct source builds to bytecode protection build using a compiled_loader to run `.pyc` files through PyInstaller.
+
+Issue:
+The packaged executable fails with:
+```
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/maryhayes/Documents/Sims/simsanity/dist/compiled_loader/_internal/compiled/core/main.pyc'
+```
+
+Cause:
+- The compiled `.pyc` files weren’t included in the frozen `_internal/` directory.
+- PyInstaller only packages data folders explicitly listed in the `.spec` file.
+- The loader runs correctly but cannot locate the `compiled` folder inside the bundle.
+
+Fix Implemented So Far:
+1. Built from `compiled_loader.py` using PyInstaller successfully (build completes cleanly).
+2. Added runtime logic in `compiled_loader.py` to detect the correct path (`sys._MEIPASS`).
+3. Confirmed bytecode files are working outside the build but missing inside the packaged version.
+
+Next Steps:
+1. Edit `build_scripts/compiled_loader.spec` → inside the `Analysis()` block, add:
+   ```python
+   datas=[('compiled', 'compiled')],
+   ```
+   This ensures the full `compiled/` folder is copied into the app bundle.
+2. Rebuild:
+   ```bash
+   rm -rf build dist
+   pyinstaller --clean --noconfirm --workpath build --specpath build_scripts --distpath dist compiled_loader.py
+   ```
+3. Test again:
+   ```bash
+   ./dist/compiled_loader/compiled_loader
+   ```
+   The app should now find `compiled/core/main.pyc` successfully.
+
+Next Targets:
+- Once verified, generate `protect_build.command` to automate compile → copy → build → run.
+- Optionally add digital signing or encryption for deeper protection.
+
+───────────────────────────────

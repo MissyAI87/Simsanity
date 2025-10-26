@@ -1,0 +1,29 @@
+
+
+# --- Core Web Dependencies ---
+Flask==3.0.3
+Werkzeug==3.0.3
+itsdangerous==2.2.0
+click==8.1.7
+Jinja2==3.1.4
+
+# --- System Utilities ---
+psutil==6.0.0
+pyyaml==6.0.2
+requests==2.32.3
+
+# --- Packaging / Parsing ---
+MarkupSafe==3.0.2
+importlib-metadata>=8.0.0
+packaging==24.0
+
+# --- Optional (UI and file helpers) ---
+markdown==3.6
+Pillow==10.4.0
+
+# --- Terminal and Console Tools ---
+colorama==0.4.6
+
+# --- Developer Tools (optional) ---
+pytest>=8.0.0
+black>=24.3.0
